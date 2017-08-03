@@ -10,7 +10,7 @@
     "express": "^4.15.3"
   },
   "scripts": {
-    "preinstall": "npm install -g pnpm",
+    "preinstall": "npm install -g pnpm && sudo ln -s ~/workspace/create.sh /usr/local/bin/create",
     "start": "node server.js"
   }
 }

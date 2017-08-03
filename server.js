@@ -8,7 +8,14 @@ var files = fs.readdirSync( __dirname )
 
 server.get('/', ( req, res ) => {
     
-    res.send('hi there');
+    var html = `
+        <h1>:(</h1>
+        <ul>
+            ${ files.map( file => `<li><a href="/${file}">${file}</a></li>` ) }
+        </ul>
+    `;
+    
+    res.send( html );
     
 })
 

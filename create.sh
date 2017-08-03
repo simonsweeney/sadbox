@@ -1,4 +1,13 @@
 #!/bin/bash
-git clone https://github.com/simonsweeney/second_base.git _$1
-cd _$1
+
+if [ $# -eq 0 ]
+  then
+    echo "What?"
+    read name
+  else
+    name = $1
+fi
+
+git clone https://github.com/simonsweeney/second_base.git _"$name"
+cd _"$name"
 pnpm install
