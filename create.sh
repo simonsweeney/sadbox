@@ -5,7 +5,7 @@ if [ $# -eq 0 ]
     echo "What?"
     read name
   else
-    name = $1
+    name=$1
 fi
 
 git clone https://github.com/simonsweeney/second_base.git _"$name"
